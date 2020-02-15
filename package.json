@@ -6,8 +6,12 @@
   "author": "Martin",
   "license": "MIT",
   "scripts": {
-    "start:sender": "cd app/apps/sender && yarpm start",
-    "start:receiver": "cd app/apps/receiver && yarpm serve"
+    "setup": "yarpm install && yarpm run setup:sender && yarpm run setup:receiver",
+    "setup:sender": "cd app/apps/sender && yarpm install",
+    "setup:receiver": "cd app/apps/receiver && yarpm install",
+    "start": "yarpm run start:sender & yarpm run start:receiver",
+    "start:sender": "cd app/apps/sender && PORT=8001 yarpm start",
+    "start:receiver": "cd app/apps/receiver && yarpm serve --port 8002"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
