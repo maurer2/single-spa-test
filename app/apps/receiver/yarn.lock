@@ -9083,6 +9083,11 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
+single-spa-vue@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/single-spa-vue/-/single-spa-vue-1.7.0.tgz#3c813cf65771e0988771ca0308062723068a0fb2"
+  integrity sha512-ZuhObgu/ORn3aD3ctJtrBB0hqwgZb4aZ+zIujGQwz/bDe22xO9RSNNVlsCmyx5uVPdcxne4alje0h27Afn3rQw==
+
 sisteransi@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.4.tgz#386713f1ef688c7c0304dc4c0632898941cad2e3"
@@ -9599,6 +9604,11 @@ symbol-tree@^3.2.2:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
+
+systemjs-webpack-interop@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/systemjs-webpack-interop/-/systemjs-webpack-interop-1.1.2.tgz#2fb90e30006deda43de48c45a8cbc680e6445226"
+  integrity sha512-TJUn1wosLlB292jhDfl8PEuJEa5VRms0RGE/BnRVHp/5hKji03Ks0qkd9bH2+KC1ewp0gBN514/OJpw9DOOjww==
 
 table@^5.2.3:
   version "5.4.6"

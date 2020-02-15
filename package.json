@@ -11,7 +11,8 @@
     "setup:receiver": "cd app/apps/receiver && yarpm install",
     "start": "yarpm run start:sender & yarpm run start:receiver",
     "start:sender": "cd app/apps/sender && PORT=8001 yarpm start",
-    "start:receiver": "cd app/apps/receiver && yarpm serve --port 8002"
+    "start:receiver": "cd app/apps/receiver && yarpm serve --port 8002",
+    "serve": "serve -s -l 8000"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
@@ -21,5 +22,8 @@
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "yarpm": "^0.2.1"
+  },
+  "dependencies": {
+    "serve": "^11.3.0"
   }
 }
