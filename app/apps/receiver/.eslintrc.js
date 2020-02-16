@@ -1,12 +1,17 @@
 module.exports = {
   root: true,
   env: {
+    node: true,
     browser: true,
   },
   extends: [
-    'airbnb-base',
+    'plugin:vue/essential',
+    '@vue/airbnb',
+    '@vue/typescript/recommended',
   ],
-  plugins: [],
+  parserOptions: {
+    ecmaVersion: 2020,
+  },
   rules: {
     'no-debugger': 'off',
     'no-console': 'off',
