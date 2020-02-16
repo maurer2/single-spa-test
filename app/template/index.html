@@ -9,9 +9,7 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "navbar": "http://localhost:8080/app.js",
-          "app1": "http://localhost:8081/app.js",
-          "app2": "http://localhost:8082/app.js",
+          "receiver": "http://localhost:8002/app.js",
           "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.7/system/single-spa.min.js",
           "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
           "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.0.7/dist/vue-router.min.js"
@@ -20,7 +18,6 @@
     </script>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.7/system/single-spa.min.js" as="script" crossorigin="anonymous" />
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js" as="script" crossorigin="anonymous" />
-    <script src="https://unpkg.com/import-map-overrides@1.7.2/dist/import-map-overrides.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/system.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/amd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/named-exports.js"></script>
@@ -28,35 +25,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/use-default.min.js"></script>
   </head>
   <body>
+    <h1>Root</h1>
     <script>
       (function() {
         Promise.all([
           System.import('single-spa'),
           System.import('vue'),
           System.import('vue-router')
-        ]).then((modules) => {
-          var singleSpa = modules[0];
-          var Vue = modules[1];
-          var VueRouter = modules[2];
-
+        ]).then(([ singleSpa, Vue, VueRouter ]) => {
           Vue.use(VueRouter)
 
           singleSpa.registerApplication(
-            'navbar',
-            () => System.import('navbar'),
-            location => true
-          );
-
-          singleSpa.registerApplication(
-            'app1',
-            () => System.import('app1'),
-            location => location.pathname.startsWith('/app1')
-          )
-
-          singleSpa.registerApplication(
-            'app2',
-            () => System.import('app2'),
-            location => location.pathname.startsWith('/app2')
+            'receiver',
+            () => System.import('receiver'),
+            location => true,
           )
 
           singleSpa.start();

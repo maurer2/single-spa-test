@@ -4,7 +4,7 @@ import Vue from 'vue';
 
 import App from './App.vue';
 import router from './router/index';
-import store from './store/index';
+// import store from './store/index';
 
 Vue.config.productionTip = false;
 
@@ -13,7 +13,7 @@ const vueLifecycles = singleSpaVue({
   appOptions: {
     render: (h: any) => h(App),
     router,
-    store,
+    // store,
   },
 });
 
