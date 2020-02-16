@@ -9,11 +9,17 @@ module.exports = {
         filename: 'bundle.js'
     },
     mode: 'development',
+    watch: true,
     module: {
       rules: [
         {
           test: /\.css$/,
           use: [
+            /*
+            {
+              loader: 'style-loader',
+            },
+            */
             MiniCssExtractPlugin.loader,
             {
               loader: 'css-loader',
@@ -42,6 +48,7 @@ module.exports = {
     ],
     devServer: {
       contentBase: path.join(__dirname, 'dist'),
+      hot: true,
       compress: true,
       port: 8000
     },

@@ -1,2 +1,21 @@
 @import-normalize;
 
+html {
+  font-size: 16px;
+}
+
+.wrapper {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 1rem;
+  overflow: hidden; // contain child margins
+  background: #bdbdbd;
+}
+
+.main {
+  background: #fbfbfb;
+}
+

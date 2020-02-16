@@ -1,9 +1,9 @@
 const postcssNormalize = require('postcss-normalize');
 
 module.exports = {
+  syntax: 'postcss-scss',
   plugins: [
     postcssNormalize,
-    //postcssNormalize,
     // 'postcss-import': {},
     // 'postcss-preset-env': {},
     // 'cssnano': {}
