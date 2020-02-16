@@ -13,7 +13,10 @@
     "start:sender": "cd apps/sender && PORT=8001 yarpm start",
     "start:receiver": "cd apps/receiver && yarpm serve --port 8002",
     "serve": "serve -s -l 8000 template --cors",
-    "serve2": "http-server -d -p 8000 --cors"
+    "serve2": "http-server -d -p 8000 --cors",
+    "serve3": "webpack-dev-server",
+    "build": "webpack --config webpack.config.js",
+    "build:receiver": "cd apps/receiver && yarpm build"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
@@ -25,7 +28,11 @@
     "yarpm": "^0.2.1"
   },
   "dependencies": {
+    "copy-webpack-plugin": "^5.1.1",
     "http-server": "^0.12.1",
-    "serve": "^11.3.0"
+    "serve": "^11.3.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
