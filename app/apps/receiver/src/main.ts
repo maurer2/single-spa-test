@@ -12,6 +12,7 @@ const vueLifecycles = singleSpaVue({
   Vue,
   appOptions: {
     render: (h: any) => h(App),
+    el: '#component-receiver',
     router,
     // store,
   },
