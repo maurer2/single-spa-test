@@ -1,9 +1,9 @@
 <template>
   <div class="view">
     <header>
-      Homepage
+      Subpage
     </header>
-    <message content="test 1" />
+    <message content="test 2" />
   </div>
 </template>
 
@@ -11,7 +11,7 @@
 import Message from '@/components/Message.vue';
 
 export default {
-  name: 'Home',
+  name: 'Subpage',
   components: {
     Message,
   },

@@ -1,18 +1,21 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import Subpage from '../views/Subpage.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/receiver',
+    path: '/',
     name: 'Home',
     component: Home,
+    alias: '/receiver',
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/receiver/subpage',
+    name: 'Subpage',
+    component: Subpage,
   },
 ];
 
