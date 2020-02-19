@@ -9,7 +9,8 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "sender": "http://localhost:8001/static/js/bundle.js",
+          "sender-direct": "http://localhost:8001/static/js/bundle.js",
+          "sender": "http://localhost:8080/http://localhost:8001/static/js/bundle.js",
           "receiver": "http://localhost:8002/app.js",
           "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.7/system/single-spa.min.js",
           "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
